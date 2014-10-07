@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.yusra.project" >
+
+ <TableLayout
+    android:id="@+id/tableLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+         <TableRow
+             android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+         
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_column="1"
+        android:text="Convert from:" />
+
+     </TableRow>
+    
+         <TableRow
+          android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+      
+
+             <TextView
+                 android:id="@+id/textTl"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                  android:layout_column="0"
+                 android:text="₺"
+                 android:textSize="30sp" />
+
+             <EditText
+                 android:id="@+id/amountField"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                  android:layout_column="1"
+                 android:ems="10"
+                 android:hint="Enter Amount"
+                 android:inputType="numberDecimal" />
+
+     </TableRow>
+     
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_column="1"
+        android:text="To:" />
+     </TableRow>
+     
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >      
+    
+    <TextView
+        android:id="@+id/textDollar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_column="0"
+        android:text="$"
+        android:textSize="30sp" />
+    
+    <EditText
+        android:id="@+id/dollarField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_column="1"
+        android:ems="10"
+        android:hint="US Dollar"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>    
+    </TableRow>
+     
+     
+      <TableRow
+          android:id="@+id/tableRow5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+
+    <TextView
+        android:id="@+id/textEuro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_column="0"
+        android:text="€"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/euroField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_column="1"
+        android:ems="10"
+        android:hint="Euro"
+        android:inputType="numberDecimal" />
+     </TableRow>
+     
+       <TableRow
+           android:id="@+id/tableRow7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+
+           <ImageView
+               android:id="@+id/imageView1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/goldcoin" />
+    
+    <EditText
+        android:id="@+id/goldField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_column="1"
+        android:ems="10"
+        android:hint="Gold"
+        android:inputType="numberDecimal" />
+    
+     </TableRow>
+     
+    <TableRow
+        android:id="@+id/tableRow8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:layout_column="1"
+        android:text="Convert" />
+
+     </TableRow>
+     
+</TableLayout>
+</LinearLayout>
