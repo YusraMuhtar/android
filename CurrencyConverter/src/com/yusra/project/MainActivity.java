@@ -27,10 +27,10 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		Button button = (Button)findViewById(R.id.convertButton);
-		EditText tlField  = (EditText)findViewById(R.id.amountField);
-		EditText dollarField = (EditText)findViewById(R.id.dollarField);
-		EditText euroField = (EditText)findViewById(R.id.euroField);
-		EditText goldField = (EditText)findViewById(R.id.goldField);
+		final EditText tlField  = (EditText)findViewById(R.id.amountField);
+		final EditText dollarField = (EditText)findViewById(R.id.dollarField);
+		final EditText euroField = (EditText)findViewById(R.id.euroField);
+		final EditText goldField = (EditText)findViewById(R.id.goldField);
 		String webSite = "http://openexchangerates.org/api/latest.json?app_id=81544ed74728442fa2218b0f32d41682";
 		
 		button.setOnClickListener(new OnClickListener(){
@@ -56,6 +56,16 @@ public class MainActivity extends Activity {
 		    	try {
 					JSONObject result = new JSONObject(site);
 					JSONObject rates = result.getJSONObject("rates"); 
+					Double lira = rates.getDouble("TRY");
+					Double euro = rates.getDouble("EUR");
+					Double gold = rates.getDouble("XAU");
+					Double dollar = 1 / lira;
+					
+					Double amount= Double.valueOf(tlField.getText().toString());
+					
+					dollarField.setText(String.valueOf(dollar*amount));
+					euroField.setText(String.valueOf(euro*amount));
+					goldField.setText(String.valueOf(gold*amount));
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
