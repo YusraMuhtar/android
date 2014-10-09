@@ -51,7 +51,11 @@
                   android:layout_column="1"
                  android:ems="10"
                  android:hint="Enter Amount"
-                 android:inputType="numberDecimal" />
+                 android:inputType="numberDecimal" >
+
+                 <requestFocus />
+
+             </EditText>
 
      </TableRow>
      
@@ -90,8 +94,6 @@
         android:ems="10"
         android:hint="US Dollar"
         android:inputType="numberDecimal" >
-
-        <requestFocus />
     </EditText>    
     </TableRow>
      
